@@ -1,29 +1,41 @@
-﻿// Create product names list (productNames) and add elements
-List<string> productNames = new List<string>();
-/*
-productNames.Add("Plátano​");
-productNames.Add("Patatas jamón jamón​");
-productNames.Add("Coliflor​");
-productNames.Add("Broccoli​");
-productNames.Add("Pizza barbacoa​");
-productNames.Add("Helado de chocolate​");
-productNames.Add("Zumo de naranja");
-*/
-
-// Create product prices (productPrices) list and add elements
-List<int> productPrices = new List<int>();
-/*
-productPrices.Add(58);
-productPrices.Add(463);
-productPrices.Add(2);
-productPrices.Add(14);
-productPrices.Add(879);
-productPrices.Add(540);
-productPrices.Add(333);
-*/
+﻿// Crear lista de los numeros
+List<int> ListaNumeros = new List<int>();
 
 // Ask the user to add new elements to the lists
+
+Console.WriteLine("Cuantos numeros quieres introducir?");
+string userInputTamaino1 = Console.ReadLine();
+int userInputTamaino2 = Int32.Parse(userInputTamaino1);
+
+for(int i = 0; i < userInputTamaino2; i++)
+{
+    Console.WriteLine("Introduce el numero que quieres ordenar en la lista:");
+    string userInputLista = Console.ReadLine();
+    int numero = Int32.Parse(userInputLista);
+    ListaNumeros.Add(numero);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 bool cont = false;
+
+
+
 while (cont == false)
 {
     Console.WriteLine("Introduce el nombre de un producto:");
@@ -88,7 +100,7 @@ for (int x = 0; x < productPrices.Count; x++)
             // Add element productPrices[x] at y
             orderedProductNames[y] = productNames[x];
             orderedProductPrices[y] = productPrices[x];
-            */
+           
             break;
         }
     }
@@ -99,3 +111,4 @@ for (int i = 0; i < orderedProductPrices.Count; i++)
 {
     Console.WriteLine("\t " + orderedProductNames[i] + " \t\t\t | \t " + orderedProductPrices[i]);
 }
+ */
