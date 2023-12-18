@@ -20,36 +20,82 @@ foreach (var numero in ListaNumeros) {
 }
 
 
-List<int> ListaNumerosO = new List<int>();
+Console.WriteLine("\nComo quieres ordenar la lista?\n" +
+    "Si quieres hacerlo de mayor a menor pulsa 1\n" +
+    "Si quieres hacerlo de menor a mayor pulsa 2");
+string userInputOrden = Console.ReadLine();
+int userInputOrdenS = Int32.Parse(userInputOrden);
 
-for (int i = -ListaNumeros.Count; i < ListaNumeros.Count; i++)
+//Si selecciona 1
+if (userInputOrdenS == 1)
 {
-    int x = 0;
-    foreach (int numero in ListaNumeros)
+    List<int> ListaNumerosO = new List<int>();
+
+    for (int i = -ListaNumeros.Count; i < ListaNumeros.Count; i++)
     {
-        if(numero > x)
+        int x = 0;
+        foreach (int numero in ListaNumeros)
         {
-            x = numero;
+            if (numero > x)
+            {
+                x = numero;
+            }
         }
+        foreach (int numero in ListaNumeros)
+        {
+            if (numero == x)
+            {
+                ListaNumeros.Remove(numero);
+                ListaNumerosO.Add(numero);
+                break;
+            }
+        }
+
     }
-    foreach (int numero in ListaNumeros)
+
+    Console.WriteLine("\n La lista ordenada es:");
+    foreach (int numero in ListaNumerosO)
     {
-        if (numero == x) { 
-        ListaNumeros.Remove(numero);
-        ListaNumerosO.Add(numero);
-            break;
+        Console.WriteLine(numero);
+    }
+}
+
+//Si selecciona 2
+if (userInputOrdenS == 2)
+{
+    List<int> ListaNumerosO = new List<int>();
+
+    for (int i = -ListaNumeros.Count; i < ListaNumeros.Count; i++)
+    {
+        int x = 100;
+        foreach (int numero in ListaNumeros) {
+        x = x+numero;
         }
+        foreach (int numero in ListaNumeros)
+        {
+            if (numero < x)
+            {
+                x = numero;
+            }
+        }
+        foreach (int numero in ListaNumeros)
+        {
+            if (numero == x)
+            {
+                ListaNumeros.Remove(numero);
+                ListaNumerosO.Add(numero);
+                break;
+            }
+        }
+
     }
 
+    Console.WriteLine("\n La lista ordenada es:");
+    foreach (int numero in ListaNumerosO)
+    {
+        Console.WriteLine(numero);
+    }
 }
-
-Console.WriteLine("\n La lista ordenada es:");
-foreach (int numero in ListaNumerosO)
-{
-   
-    Console.WriteLine(numero);
-}
-
 
 
 
