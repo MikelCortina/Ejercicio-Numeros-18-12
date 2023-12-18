@@ -20,6 +20,36 @@ foreach (var numero in ListaNumeros) {
 }
 
 
+List<int> ListaNumerosO = new List<int>();
+
+for (int i = -ListaNumeros.Count; i < ListaNumeros.Count; i++)
+{
+    int x = 0;
+    foreach (int numero in ListaNumeros)
+    {
+        if(numero > x)
+        {
+            x = numero;
+        }
+    }
+    foreach (int numero in ListaNumeros)
+    {
+        if (numero == x) { 
+        ListaNumeros.Remove(numero);
+        ListaNumerosO.Add(numero);
+            break;
+        }
+    }
+
+}
+
+Console.WriteLine("\n La lista ordenada es:");
+foreach (int numero in ListaNumerosO)
+{
+   
+    Console.WriteLine(numero);
+}
+
 
 
 
