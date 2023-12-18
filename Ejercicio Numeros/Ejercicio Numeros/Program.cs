@@ -13,7 +13,10 @@ for(int i = 0; i < userInputTamaino2; i++)
     string userInputLista = Console.ReadLine();
     int numero = Int32.Parse(userInputLista);
     ListaNumeros.Add(numero);
-
+}
+Console.WriteLine("\n Los numeros que quieres ordenar son:");
+foreach (var numero in ListaNumeros) {
+    Console.WriteLine(numero);
 }
 
 
