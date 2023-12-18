@@ -1,4 +1,6 @@
 ﻿// Crear lista de los numeros
+using System.Reflection;
+
 List<int> ListaNumeros = new List<int>();
 
 // Ask the user to add new elements to the lists
@@ -19,17 +21,22 @@ foreach (var numero in ListaNumeros) {
     Console.WriteLine(numero);
 }
 
+puntoDeRetorno:
 
 Console.WriteLine("\nComo quieres ordenar la lista?\n" +
-    "Si quieres hacerlo de mayor a menor pulsa 1\n" +
-    "Si quieres hacerlo de menor a mayor pulsa 2");
+    "Si quieres hacerlo de mayor a menor pulsa: 1\n" +
+    "Si quieres hacerlo de menor a mayor pulsa: 2");
 string userInputOrden = Console.ReadLine();
 int userInputOrdenS = Int32.Parse(userInputOrden);
+int p = 0;
+
 
 //Si selecciona 1
+
 if (userInputOrdenS == 1)
 {
     List<int> ListaNumerosO = new List<int>();
+    p = 1;
 
     for (int i = -ListaNumeros.Count; i < ListaNumeros.Count; i++)
     {
@@ -64,12 +71,13 @@ if (userInputOrdenS == 1)
 if (userInputOrdenS == 2)
 {
     List<int> ListaNumerosO = new List<int>();
+    p= 1;   
 
     for (int i = -ListaNumeros.Count; i < ListaNumeros.Count; i++)
     {
         int x = 100;
         foreach (int numero in ListaNumeros) {
-        x = x+numero;
+            x = x + numero;
         }
         foreach (int numero in ListaNumeros)
         {
@@ -87,7 +95,7 @@ if (userInputOrdenS == 2)
                 break;
             }
         }
-
+        
     }
 
     Console.WriteLine("\n La lista ordenada es:");
@@ -96,98 +104,23 @@ if (userInputOrdenS == 2)
         Console.WriteLine(numero);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-bool cont = false;
-
-
-
-while (cont == false)
-{
-    Console.WriteLine("Introduce el nombre de un producto:");
-    string nombreProducto = Console.ReadLine();
-    productNames.Add(nombreProducto);
-
-    Console.WriteLine("Y ahora la cantidad que deseas comprar:");
-    string userInput = Console.ReadLine();
-    int cantidadProducto = Int32.Parse(userInput);
-    productPrices.Add(cantidadProducto);
-
-    Console.WriteLine("Quieres seguir comprando?:");
-    string userInput2 = Console.ReadLine();
-    userInput2.ToLower();
-
-    if (userInput2 == "no")
+    else if(p == 0)
     {
-        cont = true;
+    Console.WriteLine("\n Por favor selecciona una de las dos opciones:");
+        goto puntoDeRetorno;
     }
-}
 
 
 
-// Create ordered product names (orderedProductNames) list
-List<string> orderedProductNames = new List<string>();
 
-// Create ordered product prices (orderedProductPrices) list
-List<int> orderedProductPrices = new List<int>();
 
-// Iterate productPrices and call the iterator "x"
-for (int x = 0; x < productPrices.Count; x++)
-{
-    // Iterate orderedProductPrices and call the iterator "y"
-    for (int y = 0; y <= orderedProductPrices.Count; y++)
-    {
-        // Check if y == orderedProductPrices.Count
-        if (y == orderedProductPrices.Count)
-        {
-            orderedProductNames.Add(productNames[x]);
-            orderedProductPrices.Add(productPrices[x]);
-            break;
-        }
 
-        // Check if orderedProductPrices[y] > productPrices[x]
-        if (orderedProductPrices[y] > productPrices[x])
-        {
-            orderedProductNames.Insert(y, productNames[x]);
-            orderedProductPrices.Insert(y, productPrices[x]);
 
-            /* Manual insert code
-            // Add last element to the end of the list
-            orderedProductNames.Add(orderedProductNames[orderedProductNames.Count - 1]);
-            orderedProductPrices.Add(orderedProductPrices[orderedProductPrices.Count - 1]);
 
-            // Move all elements 1 position to the right
-            for (int z = orderedProductPrices.Count - 2; z > y; z--)
-            {
-                orderedProductNames[z] = orderedProductNames[z - 1];
-                orderedProductPrices[z] = orderedProductPrices[z - 1];
-            }
 
-            // Add element productPrices[x] at y
-            orderedProductNames[y] = productNames[x];
-            orderedProductPrices[y] = productPrices[x];
-           
-            break;
-        }
-    }
-}
 
-Console.WriteLine("\t Product \t\t\t | \t Prices");
-for (int i = 0; i < orderedProductPrices.Count; i++)
-{
-    Console.WriteLine("\t " + orderedProductNames[i] + " \t\t\t | \t " + orderedProductPrices[i]);
-}
- */
+
+
+
+
+
