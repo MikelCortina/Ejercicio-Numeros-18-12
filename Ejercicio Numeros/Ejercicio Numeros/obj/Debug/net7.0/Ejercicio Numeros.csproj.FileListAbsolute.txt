@@ -1,0 +1,4 @@
+C:\Users\MikelCortinaAreitio\Desktop\Ejercicio\Ejercicio-Numeros-18-12\Ejercicio Numeros\Ejercicio Numeros\obj\Debug\net7.0\Ejercicio Numeros.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MikelCortinaAreitio\Desktop\Ejercicio\Ejercicio-Numeros-18-12\Ejercicio Numeros\Ejercicio Numeros\obj\Debug\net7.0\Ejercicio Numeros.AssemblyInfoInputs.cache
+C:\Users\MikelCortinaAreitio\Desktop\Ejercicio\Ejercicio-Numeros-18-12\Ejercicio Numeros\Ejercicio Numeros\obj\Debug\net7.0\Ejercicio Numeros.AssemblyInfo.cs
+C:\Users\MikelCortinaAreitio\Desktop\Ejercicio\Ejercicio-Numeros-18-12\Ejercicio Numeros\Ejercicio Numeros\obj\Debug\net7.0\Ejercicio Numeros.csproj.CoreCompileInputs.cache
